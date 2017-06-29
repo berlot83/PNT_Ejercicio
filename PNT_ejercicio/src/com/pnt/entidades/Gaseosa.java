@@ -17,9 +17,18 @@ public class Gaseosa extends Articulo {
 					return litros;
 				}
 			
+				
 					@Override
-					public String toString(){
-					return "Nombre: "+getDescripcion()+" /// Litros: "+getLitros()+" /// precio: $"+getPrecio();	
-					}
-			
+						public String descripcion(){
+							return "Nombre: "+getDescripcion()+" /// Litros: "+getLitros()+" /// precio: $"+getPrecio();	
+						}
+				
+						
+					//Puede usarse también la sobreescritura de toString().
+							
+					@Override
+						public String toString(){
+							return "Nombre: "+getDescripcion()+" /// Litros: "+getLitros()+" /// precio: $"+getPrecio();	
+						}
+				
 }

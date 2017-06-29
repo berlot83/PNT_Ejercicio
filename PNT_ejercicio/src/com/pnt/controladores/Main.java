@@ -19,9 +19,12 @@ public class Main{
 				productos.add(new Fruta("Frutillas", 64, "kilo"));
 					
 					for(Articulo resultado : productos){
-							System.out.println(resultado.toString());
+							System.out.println(resultado.descripcion());
+							//System.out.println(resultado.toString());	//Si se descomenta esta linea tenemos el mismo resultado.
 						
 					}
+					
+				
 					//Los métodos estáticos masBarato() y masCaro() estan en Utilidades.
 						System.out.println("========================================================");
 						System.out.println("Producto más barato: "+ Utilidades.masBarato_ForEach(productos));

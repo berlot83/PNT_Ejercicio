@@ -26,4 +26,9 @@ public abstract class Articulo {
 				public void setDescripcion(String descripcion) {
 					this.descripcion = descripcion;
 				}
+				
+				
+					public String descripcion(){
+						return null;
+					}
 	}
