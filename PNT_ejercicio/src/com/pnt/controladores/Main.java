@@ -14,10 +14,10 @@ public class Main{
 	public static void main(String[] argumentos){
 			
 		List<Articulo> productos= new ArrayList<>();
-		productos.add(new Gaseosa("Coca-cola Zero", 2.25, 20));
-		productos.add(new Gaseosa("Coca-cola", 1.5, 18));
-		productos.add(new Shampoo("Sedal", 500, 30));
-		productos.add(new Fruta("Frutillas", 64, "kilo"));
+			productos.add(new Gaseosa("Coca-cola Zero", 2.25, 20));
+			productos.add(new Gaseosa("Coca-cola", 1.5, 18));
+			productos.add(new Shampoo("Sedal", 500, 30));
+			productos.add(new Fruta("Frutillas", 64, "kilo"));
 					
 		for(Articulo resultado : productos){
 			System.out.println(resultado.toString());
