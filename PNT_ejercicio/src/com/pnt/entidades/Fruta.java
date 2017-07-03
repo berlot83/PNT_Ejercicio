@@ -9,27 +9,17 @@ public class Fruta extends Articulo {
 		this.unidad= unidad;
 	}
 		
-			public String getUnidad() {
-				return unidad;
-			}
+		public String getUnidad() {
+		return unidad;
+		}
 		
-			public void setUnidad(String unidad) {
-				this.unidad = unidad;
-			}
+		public void setUnidad(String unidad) {
+		this.unidad = unidad;
+		}
 			
-			
-				@Override
-					public String descripcion(){
-						return "Nombre: "+getDescripcion()+" /// Precio: $"+ getPrecio() +" /// Unidad de venta: "+getUnidad();
-					}
-			
-			
-			 	//Puede usarse también la sobreescritura de toString().
 				
-				@Override
-					public String toString(){
-						return "Nombre: "+getDescripcion()+" /// Precio: $"+ getPrecio() +" /// Unidad de venta: "+getUnidad();
-					}
-		
-
+		@Override
+		public String toString(){
+		return "Nombre: "+getDescripcion()+" /// Precio: $"+ getPrecio() +" /// Unidad de venta: "+getUnidad();
+		}
 }

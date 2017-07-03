@@ -5,55 +5,39 @@ import com.pnt.entidades.Articulo;
 
 public class Utilidades {
 
-	//Con Loop for avanzado
-	static String masCaro_ForEach(List<Articulo> lista){
+	//recorro solo una vez y pongo dos if, retorno las dos variables en una linea.
+	static String masCaro_masBarato(List<Articulo> lista){
 		
-		Articulo masCaro=lista.get(0);
-			for(Articulo resultado : lista){
-				if(resultado.getPrecio() > lista.get(0).getPrecio()){
-					masCaro= resultado;	
-				}
-		}
-		return masCaro.getDescripcion();
-	}
-	
-	
-	static String masBarato_ForEach(List<Articulo> lista){
+	Articulo masCaro=lista.get(0);
+	Articulo masBarato= lista.get(0);
 		
-		Articulo masBarato= lista.get(0);
-			for(Articulo resultado : lista){
-				if(resultado.getPrecio() < lista.get(0).getPrecio()){
-					masBarato= resultado;
-				}
+		for(Articulo resultado : lista){
+			if(resultado.getPrecio() > lista.get(0).getPrecio()){
+				masCaro= resultado;	
 			}
-			return masBarato.getDescripcion();
+			if(resultado.getPrecio() < lista.get(0).getPrecio()){
+				masBarato= resultado;	
+			}
 		}
-	
-	
-	//Con Loop for básicos no implementados en Main, quedan mas largos pero sirven.
-	static String masBarato_For(List<Articulo> lista){
-		
-		Articulo masBarato= lista.get(0);
-			for(int i=0; i< lista.size(); i++){
-				if(masBarato.getPrecio() > lista.get(i).getPrecio())
-					{
-						masBarato= lista.get(i);
-					}
-		}
-		return masBarato.getDescripcion();
+	return "El producto más Caro es: " + masCaro.getDescripcion()+ " 'método String'" + "\nEl producto más Barato: " + masBarato.getDescripcion()+ " 'método String'";
 	}
-
-
-	static String masCaro_For(List<Articulo> lista){
+	
+	//Recorro una vez e imprimo directamente en pantalla los resultados.
+	static void masCaro_masBarato_void(List<Articulo> lista){
 		
-		Articulo masBarato= lista.get(0);
-			for(int i=0; i< lista.size(); i++){
-				if(masBarato.getPrecio() > lista.get(i).getPrecio())
-					{
-						masBarato= lista.get(i);
-					}
+	Articulo masCaro=lista.get(0);
+	Articulo masBarato= lista.get(0);
+		
+		for(Articulo resultado : lista){
+			if(resultado.getPrecio() > lista.get(0).getPrecio()){
+				masCaro= resultado;	
+			}
+			if(resultado.getPrecio() < lista.get(0).getPrecio()){
+				masBarato= resultado;	
+			}
 		}
-		return masBarato.getDescripcion();
+	System.out.println("El producto mas Barato es: "+ masBarato.getDescripcion() + " 'metodo void'");
+	System.out.println("El producto mas caro es: " + masCaro.getDescripcion() + " 'metodo void'");
 	}
 	
 }
